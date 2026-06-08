@@ -65,7 +65,7 @@ nextflow_workflow {
                 input[0] = channel.of([[id:'reference'], file('/home/emma.dizdarevic/raredisease/work/5c/f512b3b07eb276e8d4c9742882da5a/reference.dict', checkIfExists: true)]).collect()
                 input[1] = channel.of([[id:'reference'], file(params.pipelines_testdata_base_path + 'reference/reference.fasta', checkIfExists: true)]).collect()
                 input[2] = channel.of([
-                    file(params.pipelines_testdata_base_path + 'svdb_gnomad_genomes_sv-.vcf', checkIfExists: true),
+                    file(params.pipelines_testdata_base_path + 'reference/svdb_gnomad_genomes_sv-.vcf', checkIfExists: true),
                     'AF',
                     'AC',
                     'gnomad_svAF',
